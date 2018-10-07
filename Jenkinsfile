@@ -6,7 +6,7 @@ node{
    stage('Compile-Package'){
       // Get maven home path
       def mvnHome =  tool name: 'Maven', type: 'maven'   
-      sh "${mvnHome}\bin\mvn clean  package"
+      bat(/"${mvnHome}\bin\mvn" -Dintegration-tests.skip=true clean package/)
    }
 
 
