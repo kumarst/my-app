@@ -6,6 +6,6 @@ node{
       // Get maven home path
       
       def h = hi
-      sh 'echo ${h}'
+      sh "echo ${h}"
    }
 }
