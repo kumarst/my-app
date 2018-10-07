@@ -6,7 +6,7 @@ node{
       // Get maven home path
       def mvnHome =  tool name: 'MAVEN 323', type: 'maven'
 
-      sh "${mvnHome}/bin/mvn package"
+      sh "echo 'hi'"
    }
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
