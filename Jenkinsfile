@@ -1,7 +1,7 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/kumarst/my-app.git'
-   }
+     git credentialsId: 'kid1', url: 'https://github.com/kumarst/my-app.git'
+}
    stage('Compile-Package'){
       // Get maven home path
       def mvnHome =  tool name: 'MAVEN 323', type: 'maven'
