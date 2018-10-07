@@ -4,7 +4,7 @@ node{
    }
    stage('Compile-Package'){
       // Get maven home path
-      def mvnHome =  tool name: 'MAVEN 323', type: 'maven'
+      def mvnHome =  'C:\apache-maven-3.2.3-bin\apache-maven-3.2.3'
 
       sh "${mvnHome}/bin/mvn package"
    }
